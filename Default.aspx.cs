@@ -47,7 +47,7 @@ namespace ExportToExcel
                     sb.Append("<div style='float:right;width:95%;text-align:center;'>");
 
                     sb.Append("<div style='font-weight:bold; font-size:xx-large; text-align:center;'>");
-                    sb.Append("VIKASH GROUP OF INSTITUTIONS");
+                    sb.Append("GROUP OF INSTITUTIONS");
                     sb.Append("</div>");
 
                     sb.Append("<div style='font-weight:bold; font-size:medium; text-align:center;'>");
@@ -70,7 +70,7 @@ namespace ExportToExcel
                     sb.Append("<th rowspan='2'>TOTAL MARKS</th>");
                     sb.Append("<th rowspan='2'>%AGE</th>");
                     sb.Append("<th rowspan='2'>CAMPUS RANK</th>");
-                    sb.Append("<th rowspan='2'>VIKASH RANK</th>");
+                    sb.Append("<th rowspan='2'>ORG RANK</th>");
                     sb.Append("<th rowspan='2'>TOTAL CORRECT</th>");
                     sb.Append("<th rowspan='2'>TOTAL INCORRECT</th>");
                     sb.Append("<th rowspan='2'>TIME TAKEN</th>");
@@ -135,7 +135,7 @@ namespace ExportToExcel
                 var ws = wb.Worksheets.Add("Results");
                 ws.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                 var cr = 1;
-                ws.Cell(cr, 1).Value = "VIKASH GROUP OF INSTITUTIONS";
+                ws.Cell(cr, 1).Value = "GROUP OF INSTITUTIONS";
                 ws.Range(cr, 1, cr, count).Merge();
                 ws.Row(cr).Style.Font.Bold = true;
 
@@ -177,7 +177,7 @@ namespace ExportToExcel
                 ws.Cell(cr, 11).Value = "TOTAL MARKS";
                 ws.Cell(cr, 12).Value = "%AGE";
                 ws.Cell(cr, 13).Value = "CAMPUS RANK";
-                ws.Cell(cr, 14).Value = "VIKASH RANK";
+                ws.Cell(cr, 14).Value = "ORG RANK";
                 ws.Cell(cr, 15).Value = "TOTAL CORRECT";
                 ws.Cell(cr, 16).Value = "TOTAL INCORRECT";
                 ws.Cell(cr, 17).Value = "TOTAL TIME TAKEN";
