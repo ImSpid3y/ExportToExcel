@@ -102,7 +102,7 @@ namespace ExportToExcel
                         sb.Append("<td>"+row["TotalMarks"] +"</td>");
                         sb.Append("<td>"+row["Percentage"] +"</td>");
                         sb.Append("<td>"+row["CampusRank"] +"</td>");
-                        sb.Append("<td>"+row["VikashRank"] +"</td>");
+                        sb.Append("<td>"+row["ORGRank"] +"</td>");
                         sb.Append("<td>"+row["TotalCorrect"] +"</td>");
                         sb.Append("<td>"+row["TotalIncorrect"] +"</td>");
                         sb.Append("<td>"+row["TimeTaken"] +"</td>");
@@ -207,13 +207,13 @@ namespace ExportToExcel
                     ws.Cell(cr, 11).Value = row["TotalMarks"].ToString();
                     ws.Cell(cr, 12).Value = row["Percentage"].ToString();
                     ws.Cell(cr, 13).Value = row["CampusRank"].ToString();
-                    ws.Cell(cr, 14).Value = row["VikashRank"].ToString();
+                    ws.Cell(cr, 14).Value = row["ORGRank"].ToString();
                     ws.Cell(cr, 15).Value = row["TotalCorrect"].ToString();
                     ws.Cell(cr, 16).Value = row["TotalIncorrect"].ToString();
                     ws.Cell(cr, 17).Value = row["TimeTaken"].ToString();
                 }
                 cr++;
-                ws.Cell(cr, 1).Value = "Vikash | Vidya & copy; " + DateTime.Now.Year;
+                ws.Cell(cr, 1).Value = "ORG | SPID3Y & copy; " + DateTime.Now.Year;
                 ws.Cell(cr, 1).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Left;
                 ws.Range(cr, 1, cr, count / 2).Merge();
                 ws.Cell(cr, 5).Value = "Generated On :" + DateTime.Now.ToString("dddd, dd-MMMM-yyyy HH:mm");
